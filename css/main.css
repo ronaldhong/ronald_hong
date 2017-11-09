@@ -231,7 +231,6 @@ body, html {
 }
 .speciality i{
   padding-top: 10px;
-  text-align: center;
 }
 .speciality-img img {
   width:100px;
@@ -269,10 +268,6 @@ body, html {
     margin: 10px;
     margin-bottom: 30px;
     flex: 0 1 60%;
-  }
-  .speciality-img{
-    text-align: center;
-    /*display: block;*/
   }
   #navDemo{
     position: absolute;
