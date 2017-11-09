@@ -13,7 +13,6 @@
   -webkit-animation-fill-mode: both ;
   animation-fill-mode:both ;
 }
-
 .home_box{
   size:100px;
   line-height: 100px;
@@ -22,10 +21,10 @@
 .home_box h1, .home_box h2{
   font-family: American Typewriter, serif;
   margin:10px;
-  font-size: 350%;
+  font-size: 300%;
 }
 .home_box h1{
-  font-size: 450%;
+  font-size: 400%;
 }
 
 @keyframes fadeInLeft {
@@ -62,11 +61,10 @@ body, html {
 
 /* First image (Logo. Full height) */
 .bgimg-1 {
-    /*background-image: url('https://static.pexels.com/photos/167698/pexels-photo-167698.jpeg');*/
-    /*background-image: url("https://www.look.com.ua/large/201403/96381.jpg");*/
+    background-image: url('../image/forest.jpeg');
     height: 100%;
     min-width: 100%;
-    animation-name: img_fade_in;
+    /*animation-name: img_fade_in;*/
     animation-duration: 4s;
     animation-fill-mode: both;
 }
@@ -102,7 +100,6 @@ body, html {
   left: 0;
   right:0;
   margin: 0 auto;
-  width: 80%;
   color: #fff;
   text-align: center;
 }
@@ -252,38 +249,33 @@ body, html {
 
   #intro{
     top:25%;
+    width: auto;
   }
   .home_box{
     width: 60%;
+    min-width: 300px;
   }
-  .home_box h2{
-    font-size: 1.5em;
-    z-index: -999;
+  .bgimg-1, .bgimg-2, .bgimg-3 {
+    background-attachment: scroll;
   }
-  .home_box h3{
-    font-size: 1.3em;
-    z-index: -999;
+  .speciality-col{
+    flex-wrap: nowrap;
+    flex-direction: column;
   }
-    .bgimg-1, .bgimg-2, .bgimg-3 {
-        background-attachment: scroll;
-    }
-    .speciality-col{
-      flex-wrap: nowrap;
-      flex-direction: column;
-    }
-    .work-col{
-      border: 1px solid silver;
-      box-shadow: 10px 5px 5px silver;
-      margin: 10px;
-      margin-bottom: 30px;
-      flex: 0 1 60%;
-    }
-    .speciality-img{
-      text-align: center;
-      display: block;
-    }
-    #navDemo{
-      position: absolute;
-      width: 100%;
-    }
+
+  .work-col{
+    border: 1px solid silver;
+    box-shadow: 10px 5px 5px silver;
+    margin: 10px;
+    margin-bottom: 30px;
+    flex: 0 1 60%;
+  }
+  .speciality-img{
+    text-align: center;
+    /*display: block;*/
+  }
+  #navDemo{
+    position: absolute;
+    width: 100%;
+  }
 }

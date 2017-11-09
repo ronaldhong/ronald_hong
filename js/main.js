@@ -1,13 +1,14 @@
 /////
 //About me Image Slide in////
-$("#card").flip();
+// $("#card").flip();
 ////nav bar smooth scroll
-function scroll($this){
+function Scroll($this){
   event.preventDefault();
   $('html, body').animate({
       scrollTop: $($this.title).offset().top
   }, 1200);
 }
+
 
 
 $(document).ready(function() {
