@@ -189,7 +189,9 @@ button{
 #portfo-img{
   border-radius: 100%;
 }
-
+.resume{
+  z-index: 999!important;
+}
 .speciality{
   display: flex;
   flex-direction: column;
