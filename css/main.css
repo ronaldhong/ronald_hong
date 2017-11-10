@@ -1,10 +1,12 @@
 /**https://www.look.com.ua/large/201403/96381.jpg**/
+#home{
+  z-index: -999!important;
+}
 .home_title{
   display:flex;
   flex-direction: column;
   size:100% 100vh;
   margin: 0;
-  z-index: -1;
   -webkit-animation-name: fadeInLeft;
   animation-name: fadeInLeft;
   -webkit-animation-duration: 5s;
@@ -100,6 +102,7 @@ body, html {
   margin: 0 auto;
   color: #fff;
   text-align: center;
+  z-index: -999;
 }
 
 .w3-wide {letter-spacing: 10px;}
@@ -126,6 +129,9 @@ body, html {
     width: 100%;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
+}
+.form-group{
+  z-index: 999;
 }
 .work_hide{
   display: none;
