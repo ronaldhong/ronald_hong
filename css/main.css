@@ -3,11 +3,11 @@
   z-index: -999!important;
 }
 .home_title{
+  z-index: -999;
   display:flex;
   flex-direction: column;
   size:100% 100vh;
   margin: 0;
-  z-index: -999;
   -webkit-animation-name: fadeInLeft;
   animation-name: fadeInLeft;
   -webkit-animation-duration: 5s;
@@ -17,6 +17,7 @@
   text-align: center;
 }
 .home_box{
+  z-index: -999;
   margin: 0 30px;
   line-height: 100px;
 }
