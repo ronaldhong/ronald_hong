@@ -34,9 +34,6 @@ $(document).ready(function() {
         if ((element_bottom_position >= window_top_position) && (element_top_position <= window_bottom_position)) {
             element.addClass('in-view');
         }
-        // else {
-        //     element.removeClass('in-view');
-        // }
       });
     }
     //on or scroll, detect elements in view
@@ -45,8 +42,6 @@ $(document).ready(function() {
       if (waiting){
         return;
       }
-      // scrollIntervalID = setInterval(check_if_in_view(animation_elements_l), 4000)
-      // scrollIntervalID = setInterval(check_if_in_view(animation_elements_r), 4000)
       check_if_in_view(animation_elements_l)
       check_if_in_view(animation_elements_r)
       setTimeout(function () {
@@ -66,13 +61,26 @@ function onClick(element) {
 }
 
 ////////Used to toggle the menu on small screens when clicking on the menu button
-function toggleFunction() {
+function toggleFunction($this) {
+  if (($this.title)=="Toggle Navigation Menu"){
     var x = document.getElementById("navDemo");
     if (x.className.indexOf("w3-show") == -1) {
         x.className += " w3-show";
     } else {
         x.className = x.className.replace(" w3-show", "");
     }
+  }
+  else{
+    console.log("in");
+    var x = document.getElementById(($this.title))
+    if (x.className.indexOf("work_show")==-1){
+      console.log("no");
+      x.className =x.className.replace(" work_hide"," work_show");
+    }else{
+      console.log("yes");
+      x.className = x.className.replace("work_show"," work_hide")
+    }
+  }
 }
 
 ///////Home title scroll at different speed

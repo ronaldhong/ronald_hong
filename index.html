@@ -19,7 +19,7 @@
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
   <div class="w3-bar" id="myNavbar">
-    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large " href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu" style="padding:5px">
+    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large " href="javascript:void(0);" onclick="toggleFunction(this)" title="Toggle Navigation Menu" style="padding:5px">
       <i class="icon-reorder" style="font-size:30px; z-index=999"></i>
     </a>
     <a href="#home" title="#home" onclick="Scroll(this)" class="w3-bar-item w3-button w3-hide-small">HOME</a>
@@ -40,9 +40,8 @@
 </div>
 <!-- First Parallax Image with Logo Text -->
 <div class="bgimg-1 w3-display-container " id="home"></div>
-<!-- <img src="./image/forest.jpeg" id="home" class="bgimg-1 w3-display-container" alt="forest bgimage"> -->
 <div>
-  <section id="intro" class="wrapper" style="z-index: 999">
+  <section id="intro" class="wrapper">
       <div class="home_title">
         <div class="home_box" data-scroll-speed=".6">
           <h2>Hello, I'm Ronald Hong.</h2>
@@ -56,7 +55,7 @@
   </section>
 </div>
 
-<div class="w3-center"><a href="#about" title="#about" onclick="Scroll(this)"><i id="smooth_scroll" class="icon-circle-arrow-down"></i></a></div>
+<div class="w3-center smooth_scroll_div"><a href="#about" title="#about" onclick="Scroll(this)"><i id="smooth_scroll" class="icon-circle-arrow-down"></i></a></div>
 
 <!-- Container (About Section) -->
 <div class="w3-content w3-container w3-padding-64" id="about">
@@ -205,17 +204,17 @@
 <!-- Container (Portfolio Section) -->
 <div class="w3-content w3-container w3-padding-64" id="portfolio">
   <h3 class="w3-center">MY WORK</h3>
-  <p class="w3-center"><em>Visit my <a href="https://github.com/ronaldhong" target="_blank">Github</a> for more codes.<br><br> Click on the images to make them bigger<span class="w3-hide-small">, or hover over title for more details</span>!</em></p><br>
+  <p class="w3-center"><em>Visit my <a href="https://github.com/ronaldhong" target="_blank">Github</a> for more codes.</em></p><br>
 
 
   <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
   <div class="w3-center work_list">
 
-    <div class="work-col">
+    <div class="col-sm-12 w3-margin">
       <img src="./image/booklist.png" style="width:100% " onclick="onClick(this)" class="w3-hover-opacity" alt="booklist_img">
       <div class="dropdown">
-        <button id="dropbtn">BookList</button>
-        <div class="dropdown-content">
+        <button type="button" class="btn btn-primary btn-lg" onClick="toggleFunction(this)" title="BookList">BookList</button>
+        <div class="dropdown-content work_hide" id="BookList">
           <p>BookList is a mock up example of a bookstore, user can upload and share their favorite books to other users! </p>
           <p>Tool used: React.js Redux React-Router Node.js Express Mongodb(I used mlab as my cloud database service), HTML, CSS, Javascript, Bootstrap.</p>
           <a href="https://quiet-cliffs-73083.herokuapp.com/" target="_blank"><h3>Link</h3></a>
@@ -224,11 +223,11 @@
       </div>
     </div>
 
-    <div class="work-col">
+    <div class="col-sm-12 w3-margin">
       <img src="./image/petimage.png" style="width:100% " onclick="onClick(this)" class="w3-hover-opacity" alt="timesheetsgo_img">
       <div class="dropdown">
-        <button id="dropbtn">PetImage</button>
-        <div class="dropdown-content">
+        <button type="button" class="btn btn-primary btn-lg" onclick="toggleFunction(this)" title="PetImage">PetImage</button>
+        <div class="dropdown-content work_hide" id="PetImage">
           <p>Can't find your fur-baby? or need help rescuing animals on the street?</p>
           <p>Use petImage and you can post your messages so everyone can see.</p>
           <p>You can also pin the marker on the map to tell people the approximatly location of the animal!</p>
@@ -239,11 +238,11 @@
       </div>
     </div>
 
-    <div class="work-col">
+    <div class="col-sm-12 w3-margin">
       <img src="./image/TimeSheetsGo.png" style="width:100% " onclick="onClick(this)" class="w3-hover-opacity" alt="timesheetsgo_img">
       <div class="dropdown">
-        <button id="dropbtn">Time Sheets Go</button>
-        <div class="dropdown-content">
+        <button type="button" class="btn btn-primary btn-lg" onClick="toggleFunction(this)" title="Time_Sheets">Time Sheets Go</button>
+        <div class="dropdown-content work_hide" id="Time_Sheets">
           <p>A single-web-applications(SPAs) example that use React-Router for dynamic routing.</p>
           <p>Tool used: React.js React-Router CSS and Javascript. </p>
           <a href="https://ronaldhong.github.io/TimeSheetsGo/" target="_blank"><h3>Link</h3></a>
@@ -252,11 +251,11 @@
       </div>
     </div>
 
-    <div class="work-col">
+    <div class="col-sm-12 w3-margin">
       <img src="./image/Gabble.png" style="width:100% " onclick="onClick(this)" class="w3-hover-opacity" alt="Gabble">
       <div class="dropdown">
-        <button id="dropbtn">Gabble</button>
-        <div class="dropdown-content">
+        <button type="button" class="btn btn-primary btn-lg" onClick="toggleFunction(this)" title="Gabble">Gabble</button>
+        <div class="dropdown-content work_hide" id="Gabble">
           <p>Gabble is a social media platform, created by Ronald S Hong. </br> User can register a secure account, and share whatever is on their mind,</br> if you find someone's post funny, you can also show your support by clicking the "like" button! </p>
           <p>Tool used: Node.js, Express, Mongoose, Mustache. </p>
           <a href="https://github.com/ronaldhong/Gabble" target="_blank"><h3>Link<h3></a>
@@ -264,11 +263,11 @@
       </div>
     </div>
 
-    <div class="work-col">
+    <div class="col-sm-12 w3-margin">
       <img src="./image/Mars_Rover.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Mars Rover">
       <div class="dropdown">
-        <button id="dropbtn">Mars Rover</button>
-        <div class="dropdown-content">
+        <button type="button" class="btn btn-primary btn-lg" onClick="toggleFunction(this)" title="Mars">Mars Rover</button>
+        <div class="dropdown-content work_hide" id="Mars">
           <p>Choose between three Mars Rovers, select the camera type, martian sol and receive the photos provided by NASA.<br> Tool used: ReactJS, Third Party API(NASA) </p>
           <a href="https://ronaldhong.github.io/Mars_Rover_Photos/" target="_blank"><h3>Link</h3></a>
           <a href="https://github.com/ronaldhong/Mars_Rover_Photos_daily_proj" target="_blank"><h3>Code<h3></a>
@@ -276,11 +275,11 @@
       </div>
     </div>
 
-    <div class="work-col">
+    <div class="col-sm-12 w3-margin">
       <img src="./image/hangman.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Hang-man">
       <div class="dropdown">
-        <button id="dropbtn">Hangman-game</button>
-        <div class="dropdown-content">
+        <button type="button" class="btn btn-primary btn-lg" onClick="toggleFunction(this)" title="Hangman">Hangman-game</button>
+        <div class="dropdown-content work_hide" id="Hangman">
           <p>Given eight chances to guess the word, user can decide the length of the word based on the difficulty he/she selects.</p>
           <p>Tool used: Node.js, Express, Mongoose, Mustache, file system module. </p>
           <a href="https://github.com/ronaldhong/Hangman-game" target="_blank"><h3>Link<h3></a>
@@ -288,11 +287,11 @@
       </div>
     </div>
 
-    <div class="work-col">
+    <div class="col-sm-12 w3-margin">
       <img src="./image/ecommerce.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Ecommerce">
       <div class="dropdown">
-        <button id="dropbtn">e-Commerce</button>
-        <div class="dropdown-content">
+        <button type="button" class="btn btn-primary btn-lg" onClick="toggleFunction(this)" title="e_commerce">e-Commerce</button>
+        <div class="dropdown-content work_hide" id="e_commerce">
           <p>e-Commerce snowboard store - 4lyft.  </p>
           <p>Tool used: ReactJS, React Dynamic Router. </p>
           <a href="https://github.com/ronaldhong/ecommerce-mock-site" target="_blank"><h3>Link<h3></a>
