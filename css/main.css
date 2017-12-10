@@ -63,25 +63,26 @@ body, html {
 
 /* First image (Logo. Full height) */
 .bgimg-1 {
-    background-image: url('../image/forest.jpeg');
+    /*background-image: url('../image/forest.jpeg');*/
+    background-image: url("https://blog.alexdevero.com/wp-content/uploads/2016/05/Web-Design-and-Maslow%E2%80%99s-Hierarchy-of-Needs-small.jpg");
     height: 100%;
     min-width: 100%;
     animation-name: img_fade_in;
     animation-duration: 4s;
-    animation-fill-mode: both;
+    animation-fill-mode: forwards;
 }
 @keyframes img_fade_in {
     0% {
-      opacity:.6;
-      filter: blur(3px) brightness(1) contrast(100%);
+      opacity:.4;
+      filter: blur(3px) brightness(.3) contrast(130%);
     }
-    50%{
-      opacity: .8;
-      filter: blur(1.5px) brightness(.92) contrast(115%);
+    25%{
+      opacity: .6;
+      filter: blur(2px) brightness(.5) contrast(115%);
     }
     100% {
-      opacity: 1;
-      filter: blur(0px) brightness(.85) contrast(130%);
+      opacity: .8;
+      filter: blur(3px) brightness(.7) contrast(200%);
     }
 }
 
