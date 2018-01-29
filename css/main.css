@@ -29,6 +29,10 @@
 .home_box h2{
   font-size: calc(18px + 2.5vw);
 }
+.language{
+  margin-left: 110px;
+  margin-right: 110px;
+}
 
 @keyframes fadeInLeft {
   0% {
